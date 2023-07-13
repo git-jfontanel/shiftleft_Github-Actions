@@ -13,6 +13,13 @@ resource "aws_s3_bucket" "data" {
   }
 }
 
+resource "aws_s3_bucket_public_access_block" "access_data" {
+  bucket = aws_s3_bucket.data.id
+
+  block_public_acls   = true
+  block_public_policy = true
+}
+
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
   region        = "us-west-2"
