@@ -9,11 +9,11 @@ jobs:
           TL_USER: ${{ secrets.TL_USER }}
           TL_PASS: ${{ secrets.TL_PASS }}
           TL_CONSOLE: ${{ secrets.TL_CONSOLE }} 
-          BYPASS_REPOSCAN: 1
-          BYPASS_OSS_LICENSE: 1
-          BYPASS_IMAGESCAN: 1
-          BYPASS_WF: 1
-          BYPASS_SANDBOX: 1
+          BYPASS_REPOSCAN: 5
+          BYPASS_OSS_LICENSE: 5
+          BYPASS_IMAGESCAN: 5
+          BYPASS_WF: 5
+          BYPASS_SANDBOX: 5
     steps:
     
       - name: Checkout
